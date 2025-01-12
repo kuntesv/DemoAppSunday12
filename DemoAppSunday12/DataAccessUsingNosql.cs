@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace DemoAppSunday12
 {
-    public class DataAccess : IDataAccess
+    public class DataAccessUsingNosql : IDataAccess
     {
         public void SignUp(string username, string password)
-        { 
-            Console.WriteLine(" Username " + username + " with password "
-                + password + "Added into database");
+        {
+            Console.WriteLine("Username " + username + "password " +
+                password + "added using nosql database");
         }
     }
 }

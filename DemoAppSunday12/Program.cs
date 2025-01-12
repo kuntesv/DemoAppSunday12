@@ -4,7 +4,11 @@
     {
         static void Main(string[] args)
         {
-            UserInterface userInterface = new UserInterface();
+            DataAccess dataAccess = new DataAccess();
+            DataAccessUsingNosql dataAccessUsingNosql = new DataAccessUsingNosql();
+            IBusiness obj = new Business(dataAccess);
+
+            UserInterface userInterface = new UserInterface(obj);
             userInterface.getData();
         }
     }

@@ -11,6 +11,10 @@ namespace DemoAppSunday12
         public string UserName { get; set; }
         public string Password { get; set; }
 
+        private IBusiness obj = null;
+        public UserInterface(IBusiness business) { 
+            obj = business;
+        }
 
         public void getData()
         {
@@ -20,7 +24,6 @@ namespace DemoAppSunday12
             Console.WriteLine("Please enter password : ");
             Password = Console.ReadLine();
 
-            Business obj = new Business();
             obj.SignUp(UserName, Password);
         }
     }
